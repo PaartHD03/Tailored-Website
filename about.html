@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tailored</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Tailored</a>
+    </div>
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="sign-up.html" class="nav-link">Sign Up</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+</nav>
+
+<!-- About Us Content -->
+<div class="page-content">
+    <h1>About Us</h1>
+    <p>We are a dedicated team focused on providing custom tailoring services that fit your needs.</p>
+
+    <div class="about-us-container">
+        <div class="team-member">
+            <h3>John Doe</h3>
+            <p>Founder & CEO</p>
+            <p>John started Tailored to bring innovation to the tailoring industry.</p>
+        </div>
+        <div class="team-member">
+            <h3>Jane Smith</h3>
+            <p>Lead Designer</p>
+            <p>Jane's design philosophy focuses on elegance and comfort.</p>
+        </div>
+        <div class="team-member">
+            <h3>Michael Lee</h3>
+            <p>Operations Manager</p>
+            <p>Michael ensures everything runs smoothly behind the scenes.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Tailored. All rights reserved.</p>
+</div>
+
+<!-- JavaScript for Active Link Highlighting -->
+<script>
+    window.addEventListener("load", function() {
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

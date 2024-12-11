@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailored</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Tailored</a>
+    </div>
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="sign-up.html" class="nav-link">Sign Up</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+</nav>
+
+<!-- Page Content -->
+<div class="page-content">
+    <!-- Content specific to the page -->
+    <h1>Welcome to Tailored!</h1>
+    <p>Your one-stop solution for custom tailoring.</p>
+</div>
+
+<!-- Block Style Section -->
+<div class="block-container">
+    <div class="block-item">
+        <img src="images/c.jpg" alt="Power Dressing">
+        <div class="block-content">
+            <h3>POWER DRESSING</h3>
+            <p>Suits | Blazers</p>
+        </div>
+    </div>
+    <div class="block-item">
+        <img src="images/b.jpg" alt="Sharp Basics">
+        <div class="block-content">
+            <h3>SHARP BASICS</h3>
+            <p>Shirts | Pants</p>
+        </div>
+    </div>
+    <div class="block-item">
+        <img src="images/e.jpg" alt="Ceremonial">
+        <div class="block-content">
+            <h3>Cold Winters</h3>
+            <p>Jackets | Sweaters</p>
+        </div>
+    </div>
+    <div class="block-item">
+        <img src="images/traditional me.jpg" alt="Classic Ethnic">
+        <div class="block-content">
+            <h3>CLASSIC ETHNIC</h3>
+            <p>Bandhgalas | Half Jackets</p>
+        </div>
+    </div>
+    <div class="block-item">
+        <img src="images/d.jpg" alt="Cool Casuals">
+        <div class="block-content">
+            <h3>COOL CASUALS</h3>
+            <p>Polos | Jeans/Chinos</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Tailored. All rights reserved.</p>
+</div>
+
+<!-- JavaScript for Active Link Highlighting -->
+<script>
+    window.addEventListener("load", function() {
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

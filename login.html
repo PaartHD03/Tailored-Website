@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tailored</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar (same for all pages) -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Tailored</a>
+    </div>
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="sign-up.html" class="nav-link">Sign Up</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+</nav>
+
+<!-- Login Form -->
+<div class="login-container">
+    <div class="form-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+
+<div class="forgot-password">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+    </div>
+        </form>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Tailored. All rights reserved.</p>
+</div>
+
+<!-- JavaScript for Active Link Highlighting -->
+<script>
+    window.addEventListener("load", function() {
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
