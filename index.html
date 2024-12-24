@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar (same for all pages) -->
 <nav class="navbar">
     <div class="logo">
         <a href="index.html">Tailored</a>
@@ -18,14 +18,22 @@
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="features.html" class="nav-link">Features</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="sign-up.html" class="nav-link">Sign Up</a></li>
-        <li><a href="login.html" class="nav-link">Login</a></li>
+        <li>
+            <div class="user-button-container">
+                <div class="user-button">
+                    <span class="user-icon">U</span>
+                </div>
+                <div class="dropdown">
+                    <a href="login.html">Login</a>
+                    <a href="sign-up.html">Sign Up</a>
+                </div>
+            </div>
+        </li>
     </ul>
 </nav>
 
 <!-- Page Content -->
 <div class="page-content">
-    <!-- Content specific to the page -->
     <h1>Welcome to Tailored!</h1>
     <p>Your one-stop solution for custom tailoring.</p>
 </div>
@@ -69,13 +77,12 @@
     </div>
 </div>
 
-
 <!-- Footer -->
 <div class="footer">
-    <p>&copy; 2024 Tailored. All rights reserved.</p>
+    <p>&copy; 2024 Tailored. All rights reserved. Designed by Paarth Doshi.</p>
 </div>
 
-<!-- JavaScript for Active Link Highlighting -->
+<!-- JavaScript for Active Link Highlighting and Dropdown Behavior -->
 <script>
     window.addEventListener("load", function() {
         const links = document.querySelectorAll('.nav-link');
@@ -83,6 +90,29 @@
             if (link.href === window.location.href) {
                 link.classList.add('active');
             }
+        });
+
+        // Get the user button and dropdown
+        const userButton = document.querySelector('.user-icon');
+        const dropdown = document.querySelector('.dropdown');
+        const userButtonContainer = document.querySelector('.user-button-container');
+
+        // Toggle dropdown visibility on user button click
+        userButton.addEventListener('click', function(event) {
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            event.stopPropagation(); // Prevent click from propagating to document
+        });
+
+        // Close the dropdown if clicked outside of the user button container
+        document.addEventListener('click', function(event) {
+            if (!userButtonContainer.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Prevent dropdown from closing if clicked inside
+        dropdown.addEventListener('click', function(event) {
+            event.stopPropagation();
         });
     });
 </script>
